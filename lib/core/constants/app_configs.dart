@@ -1,7 +1,7 @@
 class AppConfigs {
   AppConfigs._();
 
-  static const apiEndpoint = String.fromEnvironment('API_END_POINT');
+  static const baseUrl = String.fromEnvironment('API_END_POINT');
   static const realtimeApiEndpoint =
       String.fromEnvironment('REALTIME_API_END_POINT');
   static const apiVersion = String.fromEnvironment('API_VERSION');

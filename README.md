@@ -4,27 +4,60 @@ A Flutter base.
 
 ## Used Techniques
 
-- Flutter 3.22.2 + Riverpod + Go Router + Intl + Dio
+- Flutter (3.22.2) + Riverpod + Go Router + Intl + Dio
 
 ## Project structure
 
 lib/
 ├── core/
-│   ├── constants/      # Chứa các hằng số toàn cục cho ứng dụng (API URLs, keys...)
-│   ├── utils/          # Các hàm tiện ích dùng chung trong toàn dự án
-│   ├── theme/          # Định nghĩa các màu sắc, kiểu chữ và giao diện
-│   ├── errors/         # Các lớp ngoại lệ và quản lý lỗi
-│   ├── services/       # Các dịch vụ chung, như quản lý cache, API service
-│   └── widgets/        # Các widget tái sử dụng trong nhiều phần của ứng dụng
+│   ├── constants/      # Contains global constants (API URLs, keys...)
+│   ├── utils/          # Ultilities
+│   ├── theme/          # Define theme (text, appbar...)
+│   ├── errors/         # Define exceptions and errors handlers
+│   ├── services/       # Global services such as cache management or notification service
+│   └── widgets/        # Common widgets can be reused in application
 │
 ├── features/
-│   ├── authentication/ # Tính năng xác thực
-│   │   ├── data/       # Chứa logic quản lý dữ liệu (repository, API)
-│   │   ├── domain/     # Chứa các thực thể (entities) và use cases
-│   │   └── presentation/ # Chứa màn hình và BLoC của xác thực
-│   ├── home/           # Tính năng trang chủ
-│   ├── profile/        # Tính năng quản lý hồ sơ cá nhân
-│   └── settings/       # Tính năng cài đặt
+│   ├── authentication/ # Name of feature, here is authentication
+│   │   ├── controller/ # Contains controllers to manage state and user interaction
+│   │   ├── data/       # Contains logic to manage data (repository, dto, data source)
+│   │   ├── models/     # Models
+│   │   └── views/      # User interface
+│   ├── home/           # Home feature
 │
-├── app.dart            # Tệp khởi động ứng dụng
-└── main.dart           # Tệp chính chạy ứng dụng
+├── app.dart            # Setup application before running
+└── main.dart           # Run application
+
+## Generate code with freezed, auto_route_generator
+
+```[fvm] dart pub run build_runner build --delete-conflicting-outputs```
+
+## Generate translated messages code
+
+```[fvm] flutter pub run intl_utils:generate```
+
+## Generate assets class
+
+```fluttergen -c pubspec.yaml```
+
+## Common rules folow dart standard
+
+    1. Naming convention:
+        - Name file using snake style
+        - Name class/ variable/ function using camel style
+        - Each screen is one folder with controllers, models, views and data
+        - Main screen end with _page.dart
+    2. Common styles:
+        - Declare common constants color/ textstyle/ dimension... in app_styles.dart
+        - Decalre in views/components if these styles used multiple screen in a features
+        - Declare as constant in ahead of class if multiple use in one screen
+        - Hard code if these styles just used only one screen
+
+## Generate splash screen
+
+- [flutter_native_splash](https://pub.dev/packages/flutter_native_splash)
+- ```[fvm] flutter pub run flutter_native_splash:create```
+
+## Test and get coverage
+
+```sh coverage.sh```

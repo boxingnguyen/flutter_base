@@ -8,9 +8,9 @@ class AppKeys {
   //  Global keys
   //============================================================
 
-  static final rootNavigatorKey = GlobalKey<NavigatorState>();
-  static final homeNavigatorKey = GlobalKey<NavigatorState>();
-
+  static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+  static GlobalKey<ScaffoldMessengerState> snackBarKey =
+      GlobalKey<ScaffoldMessengerState>();
   //============================================================
   //  Widget keys
   //============================================================
