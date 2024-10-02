@@ -8,6 +8,7 @@ A Flutter base.
 
 ## Project structure
 
+.
 lib/
 ├── core/
 │   ├── constants/      # Contains global constants (API URLs, keys...)
