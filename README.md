@@ -4,11 +4,10 @@ A Flutter base.
 
 ## Used Techniques
 
-- Flutter (3.22.2) + Riverpod + Go Router + Intl + Dio
+- Flutter (3.22.2) + Riverpod + Dio
 
 ## Project structure
 
-.
 lib/
 ├── core/
 │   ├── constants/      # Contains global constants (API URLs, keys...)
@@ -27,7 +26,8 @@ lib/
 │   ├── home/           # Home feature
 │
 ├── app.dart            # Setup application before running
-└── main.dart           # Run application
+├── main.dart           # Run application
+└── README.md
 
 ## Generate code with freezed, auto_route_generator
 
