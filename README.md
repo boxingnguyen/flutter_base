@@ -45,16 +45,16 @@ lib/
 
 ## Common rules folow dart standard
 
-    1. Naming convention:    
-        - Name file using snake style
-        - Name class/ variable/ function using camel style
-        - Each screen is one folder with controllers, models, views and data
-        - Main screen end with _page.dart
-    2. Common styles:
-        - Declare common constants color/ textstyle/ dimension... in app_styles.dart
-        - Decalre in views/components if these styles used multiple screen in a features
-        - Declare as constant in ahead of class if multiple use in one screen
-        - Hard code if these styles just used only one screen
+1. Naming convention:
+    - Name file using snake style
+    - Name class/ variable/ function using camel style
+    - Each screen is one folder with controllers, models, views and data
+    - Main screen end with _page.dart
+2. Common styles:
+    - Declare common constants color/ textstyle/ dimension... in app_styles.dart
+    - Decalre in views/components if these styles used multiple screen in a features
+    - Declare as constant in ahead of class if multiple use in one screen
+    - Hard code if these styles just used only one screen
 
 ## Generate splash screen
 
