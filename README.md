@@ -8,6 +8,7 @@ A Flutter base.
 
 ## Project structure
 
+```structure
 lib/
 ├── core/
 │   ├── constants/      # Contains global constants (API URLs, keys...)
@@ -28,7 +29,7 @@ lib/
 ├── app.dart            # Setup application before running
 ├── main.dart           # Run application
 └── README.md
-
+```
 
 ## Generate code with freezed, auto_route_generator
 
@@ -44,7 +45,7 @@ lib/
 
 ## Common rules folow dart standard
 
-    1. Naming convention:
+    1. Naming convention:    
         - Name file using snake style
         - Name class/ variable/ function using camel style
         - Each screen is one folder with controllers, models, views and data
