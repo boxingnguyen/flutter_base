@@ -29,6 +29,7 @@ lib/
 ├── main.dart           # Run application
 └── README.md
 
+
 ## Generate code with freezed, auto_route_generator
 
 ```[fvm] dart pub run build_runner build --delete-conflicting-outputs```

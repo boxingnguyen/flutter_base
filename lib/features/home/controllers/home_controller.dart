@@ -14,8 +14,8 @@ class HomeController extends _$HomeController {
   }
 
   Future<void> fetchPost() async {
-    final asyncPosts = await ref.watch(homeRepoProvider.notifier).fetchPosts();
-    // await ref.watch(homeRepoProvider.notifier).postWithError(); // try return API error
+    final asyncPosts = await ref.read(homeRepoProvider.notifier).fetchPosts();
+    // await ref.read(homeRepoProvider.notifier).postWithError(); // try return API error
     state = state.copyWith(postList: asyncPosts);
   }
 
