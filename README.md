@@ -4,7 +4,7 @@ A Flutter base.
 
 ## Used Techniques
 
-- Flutter (3.22.2) + Riverpod + Dio
+- Flutter (3.22.2) + [Riverpod](https://pub.dev/packages/flutter_riverpod) + [Dio](https://pub.dev/packages/dio)
 
 ## Project structure
 
